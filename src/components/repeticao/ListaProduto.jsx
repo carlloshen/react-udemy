@@ -1,8 +1,8 @@
 import React from "react";
 import lista from "../../data/produtos";
-
+import "./ListaProduto.css"
 const Produtos = () => {
-    
+  
   const listaProduto = lista.map((prod) => {
     return <tr key={prod.id}>
         <td>{prod.id}</td>
@@ -11,10 +11,15 @@ const Produtos = () => {
     </tr>;
   });
   return (
-    <table border={1}>
+    <table className="tabela" border={1}>
       <thead >
         <tr>
-          <th colspan={3}>Lista De produtos</th>
+          <th colSpan={3}>Lista De produtos</th>
+        </tr>
+        <tr>
+          <th>Id</th>
+          <th>Produto</th>
+          <th>Preco</th>
         </tr>
       </thead>
       <tbody>

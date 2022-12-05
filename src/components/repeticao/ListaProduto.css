@@ -1,0 +1,8 @@
+.tabela{
+    width: 100%;
+}
+
+.tabela > thead:nth-child(1){
+    background-color: #103615;
+    color: #fff;
+}
