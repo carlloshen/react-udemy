@@ -7,6 +7,10 @@ import Familia from "./components/basicos/Familia";
 import MembroFamilia from "./components/basicos/MembroFamilia";
 import Lista from "./components/repeticao/ListaAlunos";
 import Produtos from "./components/repeticao/ListaProduto";
+import Numero from "./components/Condicional/ParOuImpar";
+import User from "./components/Condicional/UsuarioInfo";
+import Pai from "./components/comunicacao/DiretaPai";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
 import "./App.css";
 
 const App = () => {
@@ -14,8 +18,19 @@ const App = () => {
     <div className="App">
       <h1>Fundamentos React</h1>
       <div className="Cards">
+        <Card titulo="#10 Comunicacao Indireta" color={"#001010"}>
+          <IndiretaPai />
+        </Card>
+        <Card titulo="#09 Comunicacao Direta" color={"#100010"}>
+          <Pai />
+        </Card>
+        <Card titulo="#08 Renderização Condicional" color={"#FF0090"}>
+          <Numero numero={1}></Numero>
+          <User usuario={{ nome: "henrique" }} />
+          <User usuario={{ email: "henrique" }} />
+        </Card>
         <Card titulo="#07 Desafio" color={"#101010"}>
-          <Produtos/>
+          <Produtos />
         </Card>
         <Card titulo="#06 Repetição" color={"#101010"}>
           <Lista></Lista>
